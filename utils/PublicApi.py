@@ -6,6 +6,11 @@ class PublicApi:
         self.service_key = os.getenv('SERVICE_KEY')
         self.payload = ''
 
+    def is_existed_service_key(self):
+        if self.service_key:
+            return True
+        return False
+
     def make_request(self, location_code, contract_date):
         self.payload = 'LAWD_CD=' + location_code + '&' + \
                 'DEAL_YMD=' + contract_date + '&' + \

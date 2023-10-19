@@ -17,8 +17,9 @@ main_category = ''
 sub_category = ''
 items = []
 
-exist_or_not = st.radio('폐지여부', options = ['존재', '폐지'])
-category = lawd.extract_category(exist_or_not)
+if not pa.is_existed_service_key():
+  st.warning('Please set the service key for public api')
+  st.stop()
 
 def get_items(response):
     root = ET.fromstring(response.content)
@@ -33,6 +34,9 @@ def get_items(response):
             data[tag] = text
         item_list.append(data)
     return item_list
+
+exist_or_not = st.radio('폐지여부', options = ['존재', '폐지'])
+category = lawd.extract_category(exist_or_not)
 
 with st.container():
     def update():
