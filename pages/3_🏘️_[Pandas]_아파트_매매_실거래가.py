@@ -16,7 +16,6 @@ pa = PA.PublicApi()
 main_category = ''
 sub_category = ''
 items = []
-warning_message = None
 
 def get_items(response):
     root = ET.fromstring(response.content)
