@@ -16,10 +16,7 @@ pa = PA.PublicApi()
 main_category = ''
 sub_category = ''
 items = []
-
-if not pa.is_existed_service_key():
-  st.warning('Please set the service key for public api')
-  st.stop()
+warning_message = None
 
 def get_items(response):
     root = ET.fromstring(response.content)
@@ -35,12 +32,13 @@ def get_items(response):
         item_list.append(data)
     return item_list
 
-exist_or_not = st.radio('폐지여부', options = ['존재', '폐지'])
-category = lawd.extract_category(exist_or_not)
-
 with st.container():
-    def update():
-        st.session_state['name'] = 'name'
+    service_key = st.text_input('Service Key', value=pa.get_service_key(), type='password')
+    if not pa.is_existed_service_key() and not service_key:
+        st.warning('Please set the service key for public api first')
+
+    exist_or_not = st.radio('폐지여부', options = ['존재', '폐지'])
+    category = lawd.extract_category(exist_or_not)
 
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -60,7 +58,7 @@ with st.container():
 
     if search:
         location_code = lawd.get_lawd_code(exist_or_not, main_category + ' ' + sub_category)
-        request = pa.make_request(location_code, contract_date)
+        request = pa.make_request(location_code, contract_date, service_key)
         res = requests.get(request)
         items = get_items(res)
 
