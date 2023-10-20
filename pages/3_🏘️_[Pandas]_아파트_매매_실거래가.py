@@ -9,7 +9,7 @@ import utils.PublicApi as PA
 st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.write('### [Pandas] 아파트 매매 실거래가')
-st.write('check out this [link]()')
+st.write('check out this [link](https://wide-shallow.tistory.com/entry/Pandas-%EC%95%84%ED%8C%8C%ED%8A%B8-%EB%A7%A4%EB%A7%A4-%EC%8B%A4%EA%B1%B0%EB%9E%98%EA%B0%80)')
 
 lawd = LD.Lawd()
 pa = PA.PublicApi()
