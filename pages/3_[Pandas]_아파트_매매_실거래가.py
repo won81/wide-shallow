@@ -56,7 +56,7 @@ with st.container():
     search = st.button('조회하기')
 
     if search:
-        location_code = lawd.get_lawd_code(exist_or_not, main_category + ' ' + sub_category)
+        location_code = lawd.get_lawd_code(main_category + ' ' + sub_category, exist_or_not)
         request = pa.make_request(location_code, contract_date, service_key)
         res = requests.get(request)
         items = get_items(res)

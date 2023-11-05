@@ -28,6 +28,6 @@ with st.container():
             ('시/군/구', ) + tuple(sorted(category[main_category])))
 
 with st.container():
-    searched = lawd.get_lawd(exist_or_not, main_category, sub_category)
+    searched = lawd.get_lawd(main_category, sub_category, exist_or_not)
     st.dataframe(searched, use_container_width = True)
 
