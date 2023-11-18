@@ -3,6 +3,8 @@ import pandas as pd
 import utils.Lawd as LD
 import utils.PublicApi as PA
 
+st.set_page_config(layout="wide")
+
 st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.write('### [Pandas] 법정동코드 조회하기')

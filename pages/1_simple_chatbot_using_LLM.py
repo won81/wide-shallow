@@ -3,6 +3,8 @@ import requests
 import streamlit as st
 from streamlit_chat import message
 
+st.set_page_config(layout="wide")
+
 st.write('### Simple Chatbot using LLM')
 st.write('check out this [link](https://wide-shallow.tistory.com/entry/Streamlit%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Chatbot-%EB%A7%8C%EB%93%A4%EA%B8%B0)')
 

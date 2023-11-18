@@ -4,6 +4,8 @@ import numpy as np
 import streamlit as st
 from streamlit_folium import st_folium
 
+st.set_page_config(layout="wide")
+
 st.write('### [데이터시각화] 연도별 서울 자치구 인구 시각화')
 st.write('check out this [link](https://wide-shallow.tistory.com/entry/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%8B%9C%EA%B0%81%ED%99%94-%EC%84%9C%EC%9A%B8-%EC%9E%90%EC%B9%98%EA%B5%AC-%EC%9D%B8%EA%B5%AC-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%8B%9C%EA%B0%81%ED%99%94%ED%95%98%EA%B8%B0)')
 

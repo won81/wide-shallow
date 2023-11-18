@@ -7,6 +7,8 @@ import xml.etree.ElementTree as ET
 import utils.Lawd as LD
 import utils.PublicApi as PA
 
+st.set_page_config(layout="wide")
+
 st.write('### [데이터시각화] 전용면적별 연도별 서울 아파트 가격 변동 그래프')
 st.write('check out this [link](https://wide-shallow.tistory.com/entry/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%8B%9C%EA%B0%81%ED%99%94-%EC%A0%84%EC%9A%A9%EB%A9%B4%EC%A0%81%EB%B3%84-%EC%97%B0%EB%8F%84%EB%B3%84-%EC%84%9C%EC%9A%B8-%EC%95%84%ED%8C%8C%ED%8A%B8-%EA%B0%80%EA%B2%A9-%EB%B3%80%EB%8F%99-%EA%B7%B8%EB%9E%98%ED%94%84)')
 

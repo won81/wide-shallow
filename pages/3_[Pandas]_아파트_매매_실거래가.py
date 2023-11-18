@@ -6,6 +6,8 @@ import xml.etree.ElementTree as ET
 import utils.Lawd as LD
 import utils.PublicApi as PA
 
+st.set_page_config(layout="wide")
+
 st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 st.write('### [Pandas] 아파트 매매 실거래가')
